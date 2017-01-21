@@ -1,0 +1,13 @@
+<p>
+  {{tittle}}
+</p>
+
+<div class="quetes">
+    <li *ngFor="let quete of quetes">
+        <ul>{{quete.numero}} </ul>
+        <ul>{{quete.domaine}}</ul>
+        <ul>{{quete.story}}</ul>
+    </li>
+</div>
+
+<router-outlet></router-outlet>
