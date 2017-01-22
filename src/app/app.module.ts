@@ -14,6 +14,7 @@ import { QueteComponent } from './quete/quete.component';
 
 // Services
 import { QueteService } from './quete/quete.service';
+import { HomeComponent } from './home/home.component';
 
 // Routes
 const ROUTES = [
@@ -25,13 +26,18 @@ const ROUTES = [
   {
     path: 'quete',
     component: QueteComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    QueteComponent
+    QueteComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

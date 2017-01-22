@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 // Set our api routes
 //app.use('/quete', quete);
-app.use('/', index);
+app.use('', index);
 app.use('/api', apiRouter);
 
 // Connection to mongoose
