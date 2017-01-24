@@ -8,7 +8,7 @@ var Quetes = mongoose.model('quetes');
 var queteAccessDb = {
 
 	// Creation d'une quête
-	createQuete: function(datas, callback) {
+	create: function(datas, callback) {
 		Quetes.create({
             numero: datas.numero,
             domaine: datas.domaine,
@@ -29,12 +29,12 @@ var queteAccessDb = {
 	// Recherche de toutes les quêtes
 	search: function(callback) {
 		Quetes.find().exec()
-		.then((quete, err) => {
+		.then((quetes, err) => {
 			if(err) {
 				callback(null, err);
 			} else {
-				if (quete != null) {
-					callback(quete, err);
+				if (quetes != null) {
+					callback(quetes, err);
 				} else {
 					callback(null, err);
 				}

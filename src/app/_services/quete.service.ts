@@ -8,17 +8,10 @@ import'rxjs/add/operator/toPromise';
 export class QueteService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
-  //queteUrl = "http://localhost:27017/scrumappdb/quete";
 
   constructor(private http: Http) { }
 
   // Get all posts from the API
-  /*getAllQuetes() {
-    return this.http.get('/api/quete')
-    .toPromise()
-    .then(response => response.json())
-    .catch(this.handleError);
-  }*/
 
   getQuetes() {
     console.log('in quetes service');

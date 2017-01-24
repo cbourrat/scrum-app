@@ -13,6 +13,12 @@ const apiRouter = require('./server/routes/api');
 // Mongoose
 var DB = "mongodb://localhost:27017/scrumappdb";
 
+// used to create, sign, and verify tokens ==> ou express-jwt
+var reflect = require('reflect-metadata');
+var jwt = require('angular2-jwt');
+
+
+
 const app = express();
 
 // Parsers for POST data (middle ware)
@@ -31,8 +37,9 @@ app.use(function(req,res,next)  {
 // Point static path to dist
 app.use(express.static(path.join(__dirname, 'dist')));
 
+
+
 // Set our api routes
-//app.use('/quete', quete);
 app.use('', index);
 app.use('/api', apiRouter);
 

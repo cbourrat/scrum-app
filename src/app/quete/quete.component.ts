@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { QueteService } from './quete.service';
+import { QueteService } from '../_services/quete.service';
 
 @Component({
   selector: 'quete',
